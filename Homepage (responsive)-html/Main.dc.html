@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Widoph Logistics – Australia to Nigeria Freight</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F4F6F9}
+a{color:#0B1F3A}a:hover{color:#13305A}
+.wd{--navy:#0B1F3A;--accent:#F5A524;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#0B1F3A;background:#F4F6F9;line-height:1.5;-webkit-font-smoothing:antialiased;min-width:0}
+.wd *{box-sizing:border-box}
+.wd h1,.wd h2,.wd h3,.wd p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.ic{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;gap:12px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;margin-right:auto;min-height:48px}
+.logo:hover{color:#fff}
+.mark{width:44px;height:44px;border-radius:12px;background:var(--accent);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:22px;letter-spacing:-.02em}
+.wordmark{font-weight:800;font-size:19px;letter-spacing:-.01em;line-height:1.1}
+.wordmark span{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#B9C6DA;margin-top:3px}
+.desk{display:flex;gap:2px}
+.desk a{color:#DCE4F0;text-decoration:none;font-size:15px;font-weight:600;padding:10px 11px;border-radius:8px;white-space:nowrap}
+.desk a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.call{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:15px;min-height:48px;padding:0 10px;border-radius:12px;white-space:nowrap}
+.call:hover{color:#fff;background:rgba(255,255,255,.08)}
+.burger{display:none;width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.1);border:0;color:#fff;cursor:pointer;align-items:center;justify-content:center}
+.mnav{display:flex;flex-direction:column;padding:8px 16px 20px;gap:2px;border-top:1px solid rgba(255,255,255,.1)}
+.mnav a{color:#fff;text-decoration:none;font-size:17px;font-weight:600;padding:14px 10px;border-radius:10px}
+.mnav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.mnav .btn{margin-top:10px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;white-space:nowrap;transition:transform .15s ease,filter .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn-accent{background:var(--accent);color:#0B1F3A}
+.btn-accent:hover{filter:brightness(1.06);color:#0B1F3A}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{color:#fff;filter:brightness(1.25)}
+.btn-line{background:#fff;color:#0B1F3A;box-shadow:inset 0 0 0 1.5px #C5CFDC}
+.btn-line:hover{box-shadow:inset 0 0 0 2px #0B1F3A;color:#0B1F3A}
+.btn-sm{min-height:44px;padding:0 18px;font-size:15px;border-radius:12px}
+.btn-wa{background:#0E7A3E;color:#fff}
+.btn-wa:hover{color:#fff;filter:brightness(1.1)}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:64px 0 150px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.eyebrow{display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eyebrow i{width:28px;height:2px;background:var(--accent);display:block}
+.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:18px 0 18px}
+.hero .lede{font-size:clamp(18px,1.6vw,21px);color:#C9D4E5;max-width:540px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;padding:0;list-style:none}
+.chips li{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:#DCE4F0}
+.chips .ic{color:var(--accent)}
+.hero-art svg{width:100%;height:auto;display:block}
+.a-fill{fill:var(--accent)}
+.a-stroke{stroke:var(--accent)}
+.route{fill:none;stroke:var(--accent);stroke-width:3;stroke-dasharray:2 10;stroke-linecap:round}
+.svg-t{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800}
+
+/* quote */
+.quote-sec{position:relative;z-index:2;margin-top:-104px;padding-bottom:72px;scroll-margin-top:60px}
+.qcard{background:#fff;border-radius:28px;box-shadow:0 30px 70px -28px rgba(11,31,58,.45);display:grid;grid-template-columns:340px minmax(0,1fr);overflow:hidden;border:1px solid #E1E7EF}
+.qside{background:#EEF2F8;padding:36px 32px;display:flex;flex-direction:column;gap:20px}
+.qside h2{font-size:30px;line-height:1.1;letter-spacing:-.02em;font-weight:800}
+.qside p{color:#3E4C61;font-size:16px}
+.badge{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--accent);color:#0B1F3A;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.qsteps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.qsteps li{display:flex;gap:12px;align-items:flex-start;font-size:15px;font-weight:600;color:#1C2B42}
+.qsteps b{width:28px;height:28px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:13px;flex:none}
+.talk{margin-top:auto;border-top:1px solid #D5DDE8;padding-top:20px;display:flex;flex-direction:column;gap:10px}
+.talk strong{font-size:15px}
+.qform{padding:36px 36px 32px}
+.qhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.qhead h3{font-size:22px;font-weight:800;letter-spacing:-.01em}
+.qhead span{font-size:14px;color:#4A5568}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+.full{grid-column:1/-1}
+.lab{display:block;font-weight:700;font-size:14px;margin-bottom:8px;color:#0B1F3A}
+.lab em{font-style:normal;color:#B42318;margin-left:2px}
+.lab small{font-weight:500;color:#4A5568;font-size:13px;margin-left:6px}
+.inp{width:100%;min-height:52px;border:1.5px solid #B8C4D4;border-radius:12px;padding:0 14px;font:inherit;font-size:16px;color:#0B1F3A;background:#fff}
+.inp::placeholder{color:#6B7789}
+.inp:hover{border-color:#8796AB}
+.inp:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:#0B1F3A}
+select.inp{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#0B1F3A 50%),linear-gradient(135deg,#0B1F3A 50%,transparent 50%);background-position:calc(100% - 20px) 23px,calc(100% - 14px) 23px;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{padding:0}
+.methods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mcard{position:relative;display:flex;flex-direction:column;gap:2px;border:1.5px solid #B8C4D4;border-radius:14px;padding:14px 14px 13px;cursor:pointer;min-height:72px;background:#fff;transition:border-color .15s,background .15s}
+.mcard:hover{border-color:#0B1F3A}
+.mcard input{position:absolute;opacity:0;width:1px;height:1px}
+.mcard b{font-size:15px;font-weight:700;line-height:1.25}
+.mcard span{font-size:13px;color:#4A5568}
+.mcard.on{border-color:#0B1F3A;background:#F1F5FB;box-shadow:inset 0 0 0 1.5px #0B1F3A}
+.mcard.on:after{content:"";position:absolute;top:12px;right:12px;width:12px;height:12px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 3px #fff,0 0 0 4.5px #0B1F3A}
+.mcard:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+.seg{display:inline-flex;background:#EEF2F8;border-radius:12px;padding:4px;gap:4px;margin-bottom:10px}
+.seg button{border:0;background:transparent;font:inherit;font-weight:700;font-size:14px;color:#3E4C61;min-height:40px;padding:0 14px;border-radius:9px;cursor:pointer}
+.seg button.on{background:#fff;color:#0B1F3A;box-shadow:0 1px 3px rgba(11,31,58,.18)}
+.dims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.unit{position:relative}
+.unit .inp{padding-right:46px}
+.unit i{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-style:normal;font-size:14px;font-weight:600;color:#4A5568;pointer-events:none}
+.yn{display:flex;gap:10px}
+.opt{flex:1;position:relative;cursor:pointer}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt span{display:flex;align-items:center;justify-content:center;min-height:52px;border:1.5px solid #B8C4D4;border-radius:12px;font-weight:700;font-size:16px;background:#fff}
+.opt:hover span{border-color:#0B1F3A}
+.opt input:checked + span{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opt input:focus-visible + span{outline:3px solid var(--accent);outline-offset:2px}
+.divider{grid-column:1/-1;border-top:1px dashed #D5DDE8;margin:4px 0 0;padding-top:18px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#4A5568}
+.est{grid-column:1/-1;border:2px dashed #9AA9BD;border-radius:14px;padding:16px 18px;background:#F7F9FC;display:flex;gap:14px;align-items:flex-start}
+.est .ic{color:#4A5568;margin-top:2px}
+.est b{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#4A5568;margin-bottom:2px}
+.est p{font-size:14px;color:#3E4C61}
+.submit{grid-column:1/-1;display:flex;flex-direction:column;gap:10px}
+.submit .btn{width:100%;min-height:58px;font-size:17px}
+.fine{font-size:13px;color:#4A5568;text-align:center}
+.success{padding:56px 36px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+.okdot{width:76px;height:76px;border-radius:999px;background:var(--accent);color:#0B1F3A;display:grid;place-items:center}
+.success h3{font-size:26px;font-weight:800;letter-spacing:-.02em;max-width:520px;line-height:1.2}
+.success p{color:#3E4C61;max-width:460px}
+.row-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+
+/* sections */
+.sec{padding:88px 0;scroll-margin-top:72px}
+.sec-white{background:#fff}
+.sec-navy{background:var(--navy);color:#fff}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#3E4C61}
+.kicker:before{content:"";width:10px;height:10px;border-radius:3px;background:var(--accent)}
+.sec-navy .kicker{color:#C9D4E5}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:700px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(28px,3.4vw,42px);line-height:1.1;letter-spacing:-.025em;font-weight:800}
+.sec-head p{font-size:18px;color:#4A5568}
+.sec-navy .sec-head p{color:#C9D4E5}
+.ph{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#7A4B00;background:#FFF1D6;border:1px solid #F2C46D;padding:4px 10px;border-radius:999px}
+
+/* tracking */
+.tgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.tform{display:flex;gap:10px;margin-top:8px}
+.tform .inp{flex:1;min-width:0;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.demo-hint{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:15px;color:#3E4C61}
+.demo-hint code{font-family:ui-monospace,Menlo,monospace;font-weight:700;background:#EEF2F8;padding:3px 8px;border-radius:6px;color:#0B1F3A}
+.linkbtn{border:0;background:none;font:inherit;font-weight:700;color:#0B1F3A;text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:44px;padding:0 4px}
+.tpanel{background:#F4F6F9;border:1px solid #E1E7EF;border-radius:22px;padding:28px;min-height:300px}
+.tempty{height:100%;min-height:244px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;color:#4A5568}
+.tempty .ic{color:#8796AB}
+.tsum{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid #D5DDE8;margin-bottom:22px}
+.tsum small{display:block;font-size:13px;color:#4A5568;font-weight:600}
+.tsum strong{font-size:20px;font-weight:800;letter-spacing:.02em}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px}
+.status i{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{position:relative;display:flex;gap:16px;padding-bottom:22px}
+.tl li:last-child{padding-bottom:0}
+.tl li:before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:#C5CFDC}
+.tl li:last-child:before{display:none}
+.tl li.done:before{background:#0B1F3A}
+.dot{width:32px;height:32px;border-radius:999px;display:grid;place-items:center;flex:none;position:relative;z-index:1;background:#fff;border:2px solid #C5CFDC;color:#fff}
+.done .dot{background:#0B1F3A;border-color:#0B1F3A}
+.cur .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px rgba(245,165,36,.25)}
+.cur .dot i{width:10px;height:10px;border-radius:999px;background:#0B1F3A}
+.tl b{display:block;font-size:16px;font-weight:700;line-height:1.3;margin-top:4px}
+.tl span{font-size:14px;color:#4A5568}
+.up b{color:#4A5568}
+.nf{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.nf h3{font-size:20px;font-weight:800}
+.nf p{color:#3E4C61}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+.card{background:#fff;border:1px solid #E1E7EF;border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;grid-column:span 2}
+.card.wide{grid-column:span 3}
+.icbox{width:56px;height:56px;border-radius:16px;background:var(--navy);color:var(--accent);display:grid;place-items:center}
+.card h3{font-size:21px;font-weight:800;letter-spacing:-.01em}
+.card p{color:#4A5568;font-size:16px}
+.ticks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.ticks li{display:flex;gap:10px;align-items:center;font-size:15px;font-weight:600}
+.ticks .ic{color:#0E7A3E}
+.more{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;color:#0B1F3A;min-height:44px;align-self:flex-start;border-bottom:2px solid var(--accent)}
+.more:hover{color:#0B1F3A;gap:12px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;padding:0;margin:0}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.num{width:48px;height:48px;border-radius:14px;background:var(--accent);color:#0B1F3A;font-weight:800;font-size:20px;display:grid;place-items:center}
+.step h3{font-size:19px;font-weight:800}
+.step p{color:#C9D4E5;font-size:15px}
+.docs{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.docs li{font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:5px 10px;color:#E6ECF5}
+
+/* schedule */
+.sched-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.tbox{overflow-x:auto;border:1px solid #E1E7EF;border-radius:20px;background:#fff}
+.tbox table{width:100%;border-collapse:collapse;min-width:620px}
+.tbox th{text-align:left;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#3E4C61;background:#EEF2F8;padding:16px 20px}
+.tbox td{padding:16px 20px;border-top:1px solid #E1E7EF;font-size:16px;font-weight:600}
+.tbox td.mono{font-family:ui-monospace,Menlo,monospace;color:#4A5568;font-weight:500}
+.tbox td:last-child{text-align:right}
+.tbox th:last-child{text-align:right}
+.note{margin-top:14px;font-size:14px;color:#4A5568;display:flex;gap:8px;align-items:flex-start}
+
+/* guide */
+.guide{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:center;background:#fff;border:1px solid #E1E7EF;border-radius:28px;padding:40px;overflow:hidden}
+.guide h2{font-size:clamp(26px,3vw,36px);line-height:1.12;letter-spacing:-.02em;font-weight:800;margin:12px 0 10px}
+.guide p{color:#4A5568;font-size:17px}
+.by{display:flex;align-items:center;gap:10px;margin:18px 0 24px;font-weight:700;font-size:15px}
+.av{width:40px;height:40px;border-radius:999px;background:#EEF2F8;display:grid;place-items:center;font-weight:800;font-size:14px;color:#0B1F3A}
+.gart{background:var(--navy);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px;transform:rotate(2deg)}
+.gart i{display:block;height:10px;border-radius:999px;background:rgba(255,255,255,.18)}
+.gart i.a{background:var(--accent);width:40%}
+.gart b{color:#fff;font-size:18px;font-weight:800;line-height:1.2;margin:6px 0}
+.gnote{margin-top:16px;border:2px dashed #9AA9BD;border-radius:14px;padding:14px 16px;background:#F7F9FC;font-size:14px;color:#3E4C61}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.wcard{border-radius:22px;padding:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:14px}
+.wcard .icbox{background:var(--accent);color:#0B1F3A}
+.wcard h3{font-size:21px;font-weight:800}
+.wcard p{color:#C9D4E5}
+.partner{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-radius:22px;padding:22px 26px;background:#fff;color:#0B1F3A}
+.partner small{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#4A5568}
+.partner strong{font-size:20px;font-weight:800}
+.pl{display:flex;align-items:center;gap:16px}
+.pmark{width:52px;height:52px;border-radius:14px;border:1.5px solid #C5CFDC;display:grid;place-items:center;color:#0B1F3A}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.faq{display:flex;flex-direction:column;gap:12px}
+.faq details{background:#fff;border:1px solid #E1E7EF;border-radius:18px}
+.faq details[open]{border-color:#0B1F3A}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;font-weight:700;font-size:17px;min-height:64px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{transition:transform .2s ease}
+.faq details[open] summary .ic{transform:rotate(180deg)}
+.faq .ans{padding:0 22px 22px;color:#3E4C61;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.help{background:var(--navy);color:#fff;border-radius:22px;padding:28px;margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.help p{color:#C9D4E5}
+
+/* footer */
+.foot{background:#071528;color:#C9D4E5;padding:72px 0 32px;scroll-margin-top:72px}
+.fgr{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.2fr) minmax(0,.8fr) minmax(0,.8fr);gap:40px}
+.foot h3{color:#fff;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.foot a{color:#fff;text-decoration:none}
+.foot a:hover{color:var(--accent)}
+.fl{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.fl a,.fl span{display:inline-flex;align-items:center;gap:10px;min-height:40px}
+.fl .ic{color:var(--accent)}
+.fbot{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+.demo-tag{display:inline-flex;align-items:center;gap:8px;color:#0B1F3A;background:var(--accent);font-weight:700;padding:6px 12px;border-radius:999px}
+
+/* floating */
+.fabs{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.fab{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:60px;height:60px;padding:0 22px 0 18px;border-radius:999px;text-decoration:none;font-weight:800;font-size:16px;box-shadow:0 12px 30px -8px rgba(7,21,40,.55)}
+.fab-wa{background:#0E7A3E;color:#fff}
+.fab-wa:hover{color:#fff;filter:brightness(1.1)}
+.fab-call{display:none;background:var(--accent);color:#0B1F3A}
+.fab-call:hover{color:#0B1F3A}
+
+/* responsive */
+@media (max-width:1120px){.desk{display:none}.burger{display:inline-flex}}
+@media (min-width:1121px){.mnav{display:none}}
+@media (max-width:980px){
+.hero-grid{grid-template-columns:1fr;gap:36px}
+.hero-art{max-width:520px}
+.qcard{grid-template-columns:1fr}
+.qside{order:2}
+.tgrid,.faq-grid,.guide{grid-template-columns:1fr}
+.gart{display:none}
+.svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card,.card.wide{grid-column:span 1}
+.steps,.why{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fgr{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:680px){
+.wrap{padding:0 16px}
+.bar{height:68px;gap:8px}
+.call-num,.top .btn-quote{display:none}
+.call{width:48px;justify-content:center;padding:0;background:rgba(255,255,255,.1)}
+.wordmark{font-size:17px}
+.mark{width:40px;height:40px;font-size:20px}
+.hero{padding:40px 0 120px}
+.hero-art{display:none}
+.ctas .btn{flex:1 1 100%}
+.quote-sec{margin-top:-84px;padding-bottom:56px}
+.qcard{border-radius:22px}
+.qform{padding:24px 18px}
+.qside{padding:26px 18px}
+.fgrid{grid-template-columns:1fr;gap:18px}
+.methods{grid-template-columns:repeat(2,minmax(0,1fr))}
+.success{padding:44px 18px}
+.sec{padding:64px 0}
+.sec-head{margin-bottom:32px}
+.tform{flex-direction:column}
+.tform .btn{width:100%}
+.tpanel{padding:20px}
+.svc,.steps,.why,.fgr{grid-template-columns:1fr}
+.card{padding:22px}
+.guide{padding:26px 20px}
+.foot{padding-bottom:120px}
+.fabs{right:16px;bottom:16px}
+.fab-wa span{display:none}
+.fab-wa{padding:0;width:60px}
+.fab-call{display:inline-flex;padding:0;width:60px}
+}
+</style>
+</helmet>
+<div class="wd" style="--navy: {{navy}}; --accent: {{accent}}">
+
+<header class="top">
+<div class="wrap bar">
+<a class="logo" href="#top" aria-label="Widoph Logistics home" title="Logo slot – swap in the Widoph logo">
+<span class="mark" aria-hidden="true">W</span>
+<span class="wordmark">Widoph Logistics<span>Australia → Nigeria</span></span>
+</a>
+<nav class="desk" aria-label="Main">
+<a href="#services">Services</a>
+<a href="#how">How It Works</a>
+<a href="#schedule">Sydney LCL Schedule</a>
+<a href="#track">Track</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="call" href="tel:+61280016352" aria-label="Call 02 8001 6352">
+<svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span class="call-num">02 8001 6352</span>
+</a>
+<a class="btn btn-accent btn-sm btn-quote" href="#quote">Get a Quote</a>
+<button class="burger" type="button" aria-label="{{menuLabel}}" aria-expanded="{{menuExpanded}}" onClick="{{toggleMenu}}">
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<svg class="ic" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+</sc-if>
+<sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}">
+<svg class="ic" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"></path></svg>
+</sc-if>
+</button>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav class="mnav wrap" aria-label="Mobile">
+<a href="#services" onClick="{{closeMenu}}">Services</a>
+<a href="#how" onClick="{{closeMenu}}">How It Works</a>
+<a href="#schedule" onClick="{{closeMenu}}">Sydney LCL Schedule</a>
+<a href="#track" onClick="{{closeMenu}}">Track a Shipment</a>
+<a href="#faq" onClick="{{closeMenu}}">FAQ</a>
+<a href="#contact" onClick="{{closeMenu}}">Contact</a>
+<a class="btn btn-accent" href="#quote" onClick="{{closeMenu}}">Get a Free Quote</a>
+<a class="btn btn-ghost" href="tel:+61280016352">Call 02 8001 6352</a>
+</nav>
+</sc-if>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow"><i></i>Global Supply Chain Solutions Simplified</span>
+<h1 id="hero-title">Your Global Logistics Partner – From Procurement to Delivery</h1>
+<p class="lede">Air and sea freight from across Australia to Nigeria, with customs clearance and door-to-door delivery handled for you.</p>
+<div class="ctas">
+<a class="btn btn-accent" href="#quote">Get a Free Quote
+<svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+<a class="btn btn-ghost" href="#track">
+<svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+Track a Shipment</a>
+</div>
+<ul class="chips">
+<li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Air &amp; sea freight</li>
+<li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Customs clearance in Nigeria</li>
+<li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Door-to-door delivery</li>
+</ul>
+</div>
+<div class="hero-art">
+<svg viewBox="0 0 520 440" role="img" aria-label="Illustration of cargo travelling by air and sea from Sydney to Lagos">
+<rect x="0" y="0" width="520" height="440" rx="28" fill="#13305A"></rect>
+<path class="route" d="M92 286 C 170 80, 360 40, 436 150"></path>
+<g transform="translate(236 46) rotate(18) scale(2.6)">
+<path fill="#FFFFFF" d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+</g>
+<circle cx="92" cy="286" r="22" fill="#0B1F3A"></circle>
+<circle class="a-fill" cx="92" cy="286" r="9"></circle>
+<circle cx="436" cy="150" r="22" fill="#0B1F3A"></circle>
+<circle class="a-fill" cx="436" cy="150" r="9"></circle>
+<rect x="36" y="318" width="116" height="52" rx="12" fill="#0B1F3A"></rect>
+<text class="svg-t" x="94" y="342" fill="#FFFFFF" font-size="20" text-anchor="middle">SYD</text>
+<text x="94" y="360" fill="#B9C6DA" font-size="12" text-anchor="middle" font-family="Plus Jakarta Sans, system-ui, sans-serif">Sydney, AU</text>
+<rect x="380" y="74" width="116" height="52" rx="12" fill="#0B1F3A"></rect>
+<text class="svg-t" x="438" y="98" fill="#FFFFFF" font-size="20" text-anchor="middle">LOS</text>
+<text x="438" y="116" fill="#B9C6DA" font-size="12" text-anchor="middle" font-family="Plus Jakarta Sans, system-ui, sans-serif">Lagos, NG</text>
+<g>
+<rect x="250" y="262" width="62" height="34" rx="3" fill="#E8EEF6"></rect>
+<rect x="316" y="262" width="62" height="34" rx="3" class="a-fill"></rect>
+<rect x="382" y="262" width="62" height="34" rx="3" fill="#2E5A94"></rect>
+<rect x="250" y="300" width="62" height="34" rx="3" fill="#2E5A94"></rect>
+<rect x="316" y="300" width="62" height="34" rx="3" fill="#E8EEF6"></rect>
+<rect x="382" y="300" width="62" height="34" rx="3" class="a-fill"></rect>
+<rect x="448" y="300" width="40" height="34" rx="3" fill="#E8EEF6"></rect>
+<path d="M262 268v22M274 268v22M286 268v22M298 268v22M328 268v22M340 268v22M352 268v22M364 268v22M394 268v22M406 268v22M418 268v22M430 268v22M262 306v22M274 306v22M286 306v22M298 306v22M328 306v22M340 306v22M352 306v22M364 306v22M394 306v22M406 306v22M418 306v22M430 306v22" stroke="#0B1F3A" stroke-opacity="0.22" stroke-width="2"></path>
+<path d="M226 338 H 506 L 482 382 H 252 Z" fill="#0B1F3A"></path>
+<rect x="226" y="338" width="280" height="6" class="a-fill"></rect>
+</g>
+<path d="M190 400 q 18 -10 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0 t 36 0" fill="none" stroke="#5E82B5" stroke-width="3" stroke-linecap="round"></path>
+<path d="M30 412 q 18 -10 36 0 t 36 0 t 36 0 t 36 0" fill="none" stroke="#3D6299" stroke-width="3" stroke-linecap="round"></path>
+</svg>
+</div>
+</div>
+</section>
+
+<section class="quote-sec" id="quote" aria-labelledby="quote-title">
+<div class="wrap">
+<div class="qcard">
+<aside class="qside">
+<span class="badge">Free quote</span>
+<h2 id="quote-title">Instant quote request</h2>
+<p>Tell us what you're sending from Australia to Nigeria. The Widoph team will come back to you with a quote.</p>
+<ol class="qsteps">
+<li><b>1</b>Choose your route and shipping method</li>
+<li><b>2</b>Add your cargo details</li>
+<li><b>3</b>Send it – we'll reply by email or WhatsApp</li>
+</ol>
+<div class="talk">
+<strong>Prefer to talk to someone?</strong>
+<a class="btn btn-navy btn-sm" href="tel:+61280016352">
+<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+Call 02 8001 6352</a>
+<a class="btn btn-wa btn-sm" href="https://wa.me/61488860700" target="_blank" rel="noopener">
+<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+WhatsApp 0488 860 700</a>
+</div>
+</aside>
+
+<sc-if value="{{showForm}}" hint-placeholder-val="{{ true }}">
+<form class="qform" onSubmit="{{submitQuote}}" aria-label="Quote request form">
+<div class="qhead"><h3>Your shipment</h3><span>Fields marked * are required</span></div>
+<div class="fgrid">
+<div>
+<label class="lab" for="q-origin">Origin city in Australia<em>*</em></label>
+<select class="inp" id="q-origin" name="origin" required="">
+<option value="">Select origin</option>
+<option>Sydney</option>
+<option>Melbourne</option>
+<option>Brisbane</option>
+<option>Perth</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="lab" for="q-dest">Destination in Nigeria<em>*</em></label>
+<select class="inp" id="q-dest" name="destination" required="">
+<option value="">Select destination</option>
+<option>Lagos</option>
+<option>Abuja</option>
+<option>Port Harcourt</option>
+<option>Onitsha</option>
+<option>Other</option>
+</select>
+</div>
+
+<fieldset class="full">
+<legend class="lab">Shipping method<em>*</em></legend>
+<div class="methods">
+<sc-for list="{{methods}}" as="m" hint-placeholder-count="4">
+<label class="{{m.cls}}">
+<input type="radio" name="method" value="{{m.id}}" checked="{{m.checked}}" onChange="{{m.pick}}" required="">
+<b>{{m.label}}</b>
+<span>{{m.sub}}</span>
+</label>
+</sc-for>
+</div>
+</fieldset>
+
+<div class="full">
+<label class="lab" for="q-goods">Goods type<em>*</em></label>
+<select class="inp" id="q-goods" name="goods" required="">
+<option value="">Select goods type</option>
+<option>Personal effects</option>
+<option>Commercial goods</option>
+<option>Vehicle/machinery</option>
+<option>Food items</option>
+<option>Other</option>
+</select>
+</div>
+
+<div>
+<label class="lab" for="q-weight">Total weight</label>
+<div class="unit"><input class="inp" id="q-weight" name="weight" type="number" min="0" step="0.1" inputmode="decimal" placeholder="e.g. 120"><i>kg</i></div>
+</div>
+<div>
+<label class="lab" for="q-pkgs">Number of packages</label>
+<input class="inp" id="q-pkgs" name="packages" type="number" min="1" step="1" inputmode="numeric" placeholder="e.g. 4">
+</div>
+
+<div class="full">
+<span class="lab">Size<small>per package, or total volume</small></span>
+<div class="seg" role="group" aria-label="Size format">
+<button type="button" class="{{dimsCls}}" aria-pressed="{{dimsPressed}}" onClick="{{useDims}}">L × W × H (cm)</button>
+<button type="button" class="{{cbmCls}}" aria-pressed="{{cbmPressed}}" onClick="{{useCbm}}">Volume (CBM)</button>
+</div>
+<sc-if value="{{sizeDims}}" hint-placeholder-val="{{ true }}">
+<div class="dims">
+<div class="unit"><label class="sr" for="q-l">Length in cm</label><input class="inp" id="q-l" name="length" type="number" min="0" inputmode="decimal" placeholder="Length"><i>cm</i></div>
+<div class="unit"><label class="sr" for="q-w">Width in cm</label><input class="inp" id="q-w" name="width" type="number" min="0" inputmode="decimal" placeholder="Width"><i>cm</i></div>
+<div class="unit"><label class="sr" for="q-h">Height in cm</label><input class="inp" id="q-h" name="height" type="number" min="0" inputmode="decimal" placeholder="Height"><i>cm</i></div>
+</div>
+</sc-if>
+<sc-if value="{{sizeCbm}}" hint-placeholder-val="{{ false }}">
+<div class="unit"><label class="sr" for="q-cbm">Volume in cubic metres</label><input class="inp" id="q-cbm" name="cbm" type="number" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 1.5"><i>CBM</i></div>
+</sc-if>
+</div>
+
+<fieldset>
+<legend class="lab">Door-to-door delivery in Nigeria?<em>*</em></legend>
+<div class="yn">
+<label class="opt"><input type="radio" name="door" value="Yes" required=""><span>Yes</span></label>
+<label class="opt"><input type="radio" name="door" value="No"><span>No</span></label>
+</div>
+</fieldset>
+<fieldset>
+<legend class="lab">Need customs clearance?<em>*</em></legend>
+<div class="yn">
+<label class="opt"><input type="radio" name="customs" value="Yes" required=""><span>Yes</span></label>
+<label class="opt"><input type="radio" name="customs" value="No"><span>No</span></label>
+</div>
+</fieldset>
+
+<div class="divider">Your details</div>
+<div class="full">
+<label class="lab" for="q-name">Full name<em>*</em></label>
+<input class="inp" id="q-name" name="fullname" type="text" autocomplete="name" required="" placeholder="Your name">
+</div>
+<div>
+<label class="lab" for="q-email">Email<em>*</em></label>
+<input class="inp" id="q-email" name="email" type="email" autocomplete="email" required="" placeholder="you@example.com">
+</div>
+<div>
+<label class="lab" for="q-phone">Phone / WhatsApp<em>*</em></label>
+<input class="inp" id="q-phone" name="phone" type="tel" autocomplete="tel" required="" placeholder="+61 or +234 number">
+</div>
+
+<div class="est" role="note">
+<svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M8 6h8"></path><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h4"></path></svg>
+<div><b>Design note · Estimate placeholder</b><p>An indicative price estimate can appear here once Widoph confirms its pricing basis. This demo does not calculate or show prices.</p></div>
+</div>
+
+<div class="submit">
+<button class="btn btn-accent" type="submit">Request my free quote
+<svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</button>
+<p class="fine">Your details go only to the Widoph team to prepare your quote.</p>
+</div>
+</div>
+</form>
+</sc-if>
+
+<sc-if value="{{submitted}}" hint-placeholder-val="{{ false }}">
+<div class="success" role="status" aria-live="polite">
+<div class="okdot"><svg class="ic" width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div>
+<h3>Thanks, your quote request has been sent to the Widoph team.</h3>
+<p>Need to add something or speak to someone sooner? Call or message us on WhatsApp.</p>
+<div class="row-btns">
+<a class="btn btn-wa btn-sm" href="https://wa.me/61488860700" target="_blank" rel="noopener">WhatsApp us</a>
+<a class="btn btn-line btn-sm" href="tel:+61280016352">Call 02 8001 6352</a>
+<button class="btn btn-line btn-sm" type="button" onClick="{{resetQuote}}">Send another request</button>
+</div>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section class="sec sec-white" id="track" aria-labelledby="track-title">
+<div class="wrap tgrid">
+<div>
+<div class="sec-head" style="margin-bottom: 24px">
+<span class="kicker">Shipment tracking</span>
+<h2 id="track-title">Where's my cargo?</h2>
+<p>Enter your Widoph tracking number to see each stage of your shipment, from pickup in Australia to delivery in Nigeria.</p>
+</div>
+<form class="tform" onSubmit="{{submitTrack}}" aria-label="Track a shipment">
+<label class="sr" for="t-no">Tracking number</label>
+<input class="inp" id="t-no" name="tracking" type="text" placeholder="e.g. WDP-DEMO-1024" autocomplete="off" value="{{trackNo}}" onChange="{{onTrackInput}}">
+<button class="btn btn-navy" type="submit">
+<svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+Track</button>
+</form>
+<div class="demo-hint">
+<span class="ph">Demo</span>
+<span>Try <code>WDP-DEMO-1024</code></span>
+<button class="linkbtn" type="button" onClick="{{useDemo}}">Use demo number</button>
+</div>
+</div>
+
+<div class="tpanel" aria-live="polite">
+<sc-if value="{{trackIdle}}" hint-placeholder-val="{{ true }}">
+<div class="tempty">
+<svg class="ic" width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+<strong style="color: #0B1F3A; font-size: 17px">Your shipment timeline will appear here</strong>
+<span>Enter a tracking number and press Track.</span>
+</div>
+</sc-if>
+<sc-if value="{{trackEmpty}}" hint-placeholder-val="{{ false }}">
+<div class="nf">
+<h3>Please enter a tracking number</h3>
+<p>You'll find it on your booking confirmation. For this demo, use WDP-DEMO-1024.</p>
+<button class="btn btn-line btn-sm" type="button" onClick="{{useDemo}}">Use demo number</button>
+</div>
+</sc-if>
+<sc-if value="{{trackNotFound}}" hint-placeholder-val="{{ false }}">
+<div class="nf">
+<h3>We couldn't find that tracking number</h3>
+<p>Check the number and try again, or contact the Widoph team. This demo only recognises WDP-DEMO-1024.</p>
+<div class="row-btns" style="justify-content: flex-start">
+<button class="btn btn-line btn-sm" type="button" onClick="{{useDemo}}">Use demo number</button>
+<a class="btn btn-wa btn-sm" href="https://wa.me/61488860700" target="_blank" rel="noopener">Ask on WhatsApp</a>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{trackDemo}}" hint-placeholder-val="{{ false }}">
+<div>
+<div class="tsum">
+<div><small>Tracking number</small><strong>WDP-DEMO-1024</strong><small style="margin-top: 4px">Sydney → Lagos</small></div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px">
+<span class="ph">Demo · sample data</span>
+<span class="status"><i></i>Out for delivery</span>
+</div>
+</div>
+<ol class="tl">
+<sc-for list="{{timeline}}" as="s" hint-placeholder-count="6">
+<li class="{{s.cls}}">
+<span class="dot">
+<sc-if value="{{s.isDone}}" hint-placeholder-val="{{ true }}"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
+<sc-if value="{{s.isCur}}" hint-placeholder-val="{{ false }}"><i></i></sc-if>
+</span>
+<div><b>{{s.title}}</b><span>{{s.sub}}</span></div>
+</li>
+</sc-for>
+</ol>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="svc-title">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">Services</span>
+<h2 id="svc-title">Everything between Australia and Nigeria, handled</h2>
+<p>From procurement and pickup to customs and final delivery – choose one service or let us manage the whole journey.</p>
+</div>
+<div class="svc">
+<article class="card wide">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span>
+<h3>Air Freight</h3>
+<p>Australia to Nigeria by air – the right choice for urgent cargo.</p>
+<a class="more" href="#quote" onClick="{{pickAir}}">Quote air freight<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</article>
+<article class="card wide">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"></path><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"></path><path d="M12 10v4"></path><path d="M12 2v3"></path></svg></span>
+<h3>Sea Freight</h3>
+<p>Full container loads, or share space with LCL consolidation.</p>
+<ul class="ticks">
+<li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>FCL – full container load</li>
+<li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>LCL – consolidated shared container</li>
+</ul>
+<a class="more" href="#quote" onClick="{{pickLcl}}">Quote sea freight<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</article>
+<article class="card">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="m9 15 2 2 4-4"></path></svg></span>
+<h3>Customs Clearance in Nigeria</h3>
+<ul class="ticks">
+<li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Documentation</li>
+<li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Duty &amp; tax advice</li>
+<li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Cargo release</li>
+</ul>
+<a class="more" href="#quote">Ask about customs<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</article>
+<article class="card">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"></path><path d="M6 18h12"></path><path d="M6 14h12"></path><path d="M6 10h12"></path></svg></span>
+<h3>Warehousing &amp; Distribution</h3>
+<p>Storage for your goods and onward distribution when they're ready to move.</p>
+<a class="more" href="#quote">Ask about warehousing<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</article>
+<article class="card">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M9 12h6"></path><path d="M9 16h6"></path></svg></span>
+<h3>Procurement &amp; Supply Management</h3>
+<p>Help sourcing and managing the goods you need, from procurement through to delivery.</p>
+<a class="more" href="#quote">Ask about procurement<svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="sec sec-navy" id="how" aria-labelledby="how-title">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">How it works</span>
+<h2 id="how-title">Six steps from Australia to your door in Nigeria</h2>
+</div>
+<ol class="steps">
+<li class="step"><span class="num">1</span><h3>Cargo pickup across Australia</h3><p>We collect your goods from wherever you are in Australia.</p></li>
+<li class="step"><span class="num">2</span><h3>Documents checked</h3><p>Your paperwork is reviewed before your cargo moves.</p>
+<ul class="docs"><li>Commercial invoice</li><li>Packing list</li><li>Bill of Lading / Air Waybill</li><li>HS codes</li><li>Permits</li></ul></li>
+<li class="step"><span class="num">3</span><h3>Air or sea freight</h3><p>Your cargo travels by air or sea, depending on the method you choose.</p></li>
+<li class="step"><span class="num">4</span><h3>Nigerian customs</h3><p>Customs clearance in Nigeria, with documentation and duty &amp; tax advice.</p></li>
+<li class="step"><span class="num">5</span><h3>Cargo release</h3><p>Once cleared, your cargo is released for collection or delivery.</p></li>
+<li class="step"><span class="num">6</span><h3>Delivery to door</h3><p>Door-to-door delivery to your chosen address in Nigeria.</p></li>
+</ol>
+<div style="margin-top: 36px; display: flex; gap: 12px; flex-wrap: wrap">
+<a class="btn btn-accent" href="#quote">Start with a free quote</a>
+<a class="btn btn-ghost" href="#faq">Read the FAQ</a>
+</div>
+</div>
+</section>
+
+<section class="sec sec-white" id="schedule" aria-labelledby="sched-title">
+<div class="wrap">
+<div class="sched-top">
+<div class="sec-head" style="margin-bottom: 0">
+<span class="kicker">Sea freight · LCL</span>
+<h2 id="sched-title">Sydney LCL Shipping Schedule</h2>
+<p>Upcoming consolidated sailings from Sydney to Lagos.</p>
+</div>
+<span class="ph">Placeholder dates</span>
+</div>
+<div class="tbox" role="region" aria-label="Sydney LCL schedule table" tabindex="0">
+<table>
+<thead><tr><th scope="col">Departure</th><th scope="col">Cut-off</th><th scope="col">ETA Lagos</th><th scope="col"><span class="sr">Action</span></th></tr></thead>
+<tbody>
+<sc-for list="{{sailings}}" as="r" hint-placeholder-count="4">
+<tr>
+<td class="mono">{{r.dep}}</td>
+<td class="mono">{{r.cut}}</td>
+<td class="mono">{{r.eta}}</td>
+<td><a class="more" href="#quote" onClick="{{r.pick}}" style="margin-top: 0">Quote this sailing</a></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<p class="note"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>Placeholder rows. Real departure, cut-off and ETA dates will come from Widoph's Sydney LCL schedule page.</p>
+</div>
+</section>
+
+<section class="sec" id="guide" aria-labelledby="guide-title">
+<div class="wrap">
+<article class="guide">
+<div>
+<span class="kicker">Guide</span>
+<h2 id="guide-title">Shipping from Australia to Nigeria</h2>
+<p>Everything to know before you send goods home – methods, paperwork and customs, explained.</p>
+<div class="by"><span class="av" aria-hidden="true">BP</span>By Buchi Paul</div>
+<button class="btn btn-navy" type="button" aria-expanded="{{guideExpanded}}" onClick="{{toggleGuide}}">Read the full guide
+<svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</button>
+<sc-if value="{{guideOpen}}" hint-placeholder-val="{{ false }}">
+<div class="gnote" role="note"><strong>Demo link.</strong> On the live site this button opens Buchi Paul's full guide on the Widoph website.</div>
+</sc-if>
+</div>
+<div class="gart" aria-hidden="true">
+<i class="a"></i>
+<b>Shipping from Australia to Nigeria</b>
+<i></i><i style="width: 86%"></i><i style="width: 70%"></i><i></i><i style="width: 55%"></i>
+</div>
+</article>
+</div>
+</section>
+
+<section class="sec sec-navy" id="why" aria-labelledby="why-title">
+<div class="wrap">
+<div class="sec-head">
+<span class="kicker">Why Widoph</span>
+<h2 id="why-title">A logistics partner on both ends of the journey</h2>
+</div>
+<div class="why">
+<div class="wcard">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+<h3>Global Network</h3>
+<p>Connecting cargo from across Australia to Lagos, Abuja, Port Harcourt, Onitsha and beyond.</p>
+</div>
+<div class="wcard">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg></span>
+<h3>End-to-End Integration</h3>
+<p>Procurement, pickup, freight, customs clearance and delivery – managed as one journey.</p>
+</div>
+<div class="wcard">
+<span class="icbox"><svg class="ic" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+<h3>Customer-Centric Approach</h3>
+<p>Reach a real person by phone, email or WhatsApp at every stage of your shipment.</p>
+</div>
+</div>
+<div class="partner">
+<div class="pl">
+<span class="pmark" title="Partner logo slot"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+<div><small>Trusted partner</small><strong>SNJL Customs &amp; Consulting</strong></div>
+</div>
+<a class="btn btn-navy btn-sm" href="#quote">Ask about customs clearance</a>
+</div>
+</div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-title">
+<div class="wrap faq-grid">
+<div>
+<div class="sec-head" style="margin-bottom: 0">
+<span class="kicker">FAQ</span>
+<h2 id="faq-title">Questions before you ship</h2>
+<p>Quick answers to common questions about shipping from Australia to Nigeria.</p>
+</div>
+<div class="help">
+<strong style="font-size: 18px">Still have a question?</strong>
+<p>Talk to the Widoph team directly.</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<a class="btn btn-wa btn-sm" href="https://wa.me/61488860700" target="_blank" rel="noopener">WhatsApp us</a>
+<a class="btn btn-ghost btn-sm" href="mailto:contact@widophlogistics.com.au">Email us</a>
+</div>
+</div>
+</div>
+<div class="faq">
+<details>
+<summary>How long does shipping from Australia to Nigeria take?<svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+<div class="ans"><span class="ph">Placeholder answer</span><p>Transit time depends on whether you choose air or sea freight and on the sailing schedule. Typical timeframes to be confirmed by Widoph.</p></div>
+</details>
+<details>
+<summary>What can I ship?<svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+<div class="ans"><span class="ph">Placeholder answer</span><p>Personal effects, commercial goods, vehicles and machinery, and food items. Some goods need permits or may be restricted – Widoph to confirm the full list.</p></div>
+</details>
+<details>
+<summary>How does pricing work?<svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+<div class="ans"><span class="ph">Placeholder answer</span><p>Send a quote request with your route, method and cargo details and the Widoph team will prepare a quote. Pricing basis to be confirmed.</p><a class="more" href="#quote">Request a free quote</a></div>
+</details>
+<details>
+<summary>Will I pay customs duties in Nigeria?<svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+<div class="ans"><span class="ph">Placeholder answer</span><p>Duties and taxes may apply when goods arrive in Nigeria. Widoph's customs clearance service includes documentation, duty &amp; tax advice and cargo release.</p></div>
+</details>
+<details>
+<summary>Do you deliver door-to-door in Nigeria?<svg class="ic" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+<div class="ans"><span class="ph">Placeholder answer</span><p>Yes – choose "Yes" for door-to-door delivery in the quote form. Delivery coverage areas to be confirmed.</p></div>
+</details>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="foot" id="contact">
+<div class="wrap">
+<div class="fgr">
+<div>
+<a class="logo" href="#top" aria-label="Widoph Logistics home" style="margin-bottom: 16px">
+<span class="mark" aria-hidden="true">W</span>
+<span class="wordmark">Widoph Logistics<span>Australia → Nigeria</span></span>
+</a>
+<p>Global Supply Chain Solutions Simplified.</p>
+<p style="margin-top: 12px; font-size: 14px">WIDOPH LOGISTICS PTY LTD<br>ABN 67 637 417 497</p>
+</div>
+<div>
+<h3>Contact</h3>
+<ul class="fl">
+<li><span><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Level 14, 275 Alfred Street, North Sydney NSW 2060</span></li>
+<li><a href="tel:+61280016352"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>02 8001 6352</a></li>
+<li><a href="tel:+61488860700"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></svg>0488 860 700</a></li>
+<li><a href="mailto:contact@widophlogistics.com.au"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>contact@widophlogistics.com.au</a></li>
+</ul>
+</div>
+<div>
+<h3>Explore</h3>
+<ul class="fl">
+<li><a href="#quote">Get a Quote</a></li>
+<li><a href="#track">Track a Shipment</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#schedule">Sydney LCL Schedule</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h3>Follow</h3>
+<ul class="fl">
+<li><a href="https://www.facebook.com/widophlogistics" target="_blank" rel="noopener">Facebook</a></li>
+<li><a href="https://www.instagram.com/widophlogistics" target="_blank" rel="noopener">Instagram</a></li>
+<li><span>@widophlogistics</span></li>
+</ul>
+</div>
+</div>
+<div class="fbot">
+<span>© 2026 WIDOPH LOGISTICS PTY LTD · ABN 67 637 417 497</span>
+<span class="demo-tag">Demo mockup prepared by Fredrick Abodunrin</span>
+</div>
+</div>
+</footer>
+
+<div class="fabs">
+<a class="fab fab-call" href="tel:+61280016352" aria-label="Call Widoph Logistics on 02 8001 6352">
+<svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+</a>
+<a class="fab fab-wa" href="https://wa.me/61488860700" target="_blank" rel="noopener" aria-label="Chat with Widoph Logistics on WhatsApp, +61 488 860 700">
+<svg class="ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path><path d="M9 10h.01M12 10h.01M15 10h.01"></path></svg>
+<span>Chat on WhatsApp</span>
+</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#F5A524","options":["#F5A524","#3DBE7A","#FF8A3D"],"section":"Brand"},"navy":{"editor":"color","default":"#0B1F3A","options":["#0B1F3A","#102A43","#0A2540"],"section":"Brand"},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOpen: false, method: '', sizeMode: 'dims', submitted: false, trackNo: '', trackResult: '', guideOpen: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const setMethod = (id) => () => this.setState({ method: id });
+    const methodList = [
+      { id: 'air', label: 'Air freight', sub: 'Fastest, for urgent cargo' },
+      { id: 'lcl', label: 'Sea freight LCL', sub: 'Shared container' },
+      { id: 'fcl', label: 'Sea freight FCL', sub: 'Full container' },
+      { id: 'unsure', label: 'Not sure', sub: 'We will advise' }
+    ];
+    const methods = methodList.map((m) => ({
+      ...m,
+      checked: s.method === m.id,
+      cls: s.method === m.id ? 'mcard on' : 'mcard',
+      pick: setMethod(m.id)
+    }));
+    const steps = [
+      ['Picked up', 'Sydney, NSW', 'done'],
+      ['Departed Australia', 'Completed', 'done'],
+      ['Arrived Apapa Port, Lagos', 'Completed', 'done'],
+      ['Customs clearance', 'Completed', 'done'],
+      ['Out for delivery', 'In progress', 'cur'],
+      ['Delivered', 'Upcoming', 'up']
+    ];
+    const timeline = steps.map((x) => ({ title: x[0], sub: x[1], cls: x[2], isDone: x[2] === 'done', isCur: x[2] === 'cur' }));
+    const ph = '[DD Mon YYYY]';
+    const sailings = [1, 2, 3, 4].map(() => ({ dep: ph, cut: ph, eta: ph, pick: setMethod('lcl') }));
+    const r = s.trackResult;
+    return {
+      accent: this.props.accent ?? '#F5A524',
+      navy: this.props.navy ?? '#0B1F3A',
+      menuOpen: s.menuOpen,
+      menuClosed: !s.menuOpen,
+      menuLabel: s.menuOpen ? 'Close menu' : 'Open menu',
+      menuExpanded: s.menuOpen ? 'true' : 'false',
+      toggleMenu: () => this.setState({ menuOpen: !s.menuOpen }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      methods: methods,
+      pickAir: setMethod('air'),
+      pickLcl: setMethod('lcl'),
+      sizeDims: s.sizeMode === 'dims',
+      sizeCbm: s.sizeMode === 'cbm',
+      dimsCls: s.sizeMode === 'dims' ? 'on' : '',
+      cbmCls: s.sizeMode === 'cbm' ? 'on' : '',
+      dimsPressed: s.sizeMode === 'dims' ? 'true' : 'false',
+      cbmPressed: s.sizeMode === 'cbm' ? 'true' : 'false',
+      useDims: () => this.setState({ sizeMode: 'dims' }),
+      useCbm: () => this.setState({ sizeMode: 'cbm' }),
+      showForm: !s.submitted,
+      submitted: s.submitted,
+      submitQuote: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ submitted: true }); },
+      resetQuote: () => this.setState({ submitted: false, method: '', sizeMode: 'dims' }),
+      trackNo: s.trackNo,
+      onTrackInput: (e) => this.setState({ trackNo: e.target.value }),
+      submitTrack: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        const v = (this.state.trackNo || '').trim().toUpperCase();
+        this.setState({ trackResult: v === '' ? 'empty' : (v === 'WDP-DEMO-1024' ? 'demo' : 'notfound') });
+      },
+      useDemo: () => this.setState({ trackNo: 'WDP-DEMO-1024', trackResult: 'demo' }),
+      trackIdle: r === '',
+      trackEmpty: r === 'empty',
+      trackNotFound: r === 'notfound',
+      trackDemo: r === 'demo',
+      timeline: timeline,
+      sailings: sailings,
+      guideOpen: s.guideOpen,
+      guideExpanded: s.guideOpen ? 'true' : 'false',
+      toggleGuide: () => this.setState({ guideOpen: !s.guideOpen })
+    };
+  }
+}
+</script>
+</body>
+</html>

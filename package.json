@@ -1,0 +1,19 @@
+{
+  "name": "widoph-logistics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Widoph Logistics – Australia to Nigeria freight. Homepage, instant quote, tracking and admin back office.",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node --env-file-if-exists=.env server.js",
+    "build": "esbuild src/globe.js --bundle --minify --format=esm --target=es2020 --outfile=public/js/globe.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^7.7.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.11",
+    "three": "^0.186.1"
+  }
+}
